@@ -12,7 +12,8 @@
 <?rfc toc="yes" ?>
 <?rfc sortrefs="yes" ?>
 <?rfc symrefs="yes" ?>
-<rfc category="std" ipr="trust200902" submissionType="independent" docName="draft-multihash-01">
+<rfc category="std" ipr="trust200902" submissionType="independent"
+  docName="draft-multiformats-multihash-01">
 <front>
 
   <title>The Multihash Data Format</title>
