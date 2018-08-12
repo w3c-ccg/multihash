@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+#
+# Script to generate the multihash algorithms registry from the CSV file
+import codecs
+import csv
+import urllib.request
+
+url = 'https://raw.githubusercontent.com/multiformats/multihash/master/hashtable.csv'
+stream = urllib.request.urlopen(url)
+csvdata = csv.reader(codecs.iterdecode(stream, 'utf-8'))
+
+print("""
+      <texttable anchor="mh-registry-table" title="Multihash Algorithms Registry">
+        <ttcol align="center">Codec</ttcol>
+        <ttcol align="center">Identifier (hex)</ttcol>
+        <ttcol align="center">Status</ttcol>
+        <ttcol align="center">Specification</ttcol>
+""")
+
+for line in csvdata:
+    codec = line[0].strip()
+    identifier = line[2].strip()
+    status = 'active'
+    spec = 'Unknown'
+
+    if(codec.startswith('blake2')):
+        spec = '<eref target="https://tools.ietf.org/html/rfc7693">RFC 7693</eref>'
+    elif(codec.startswith('sha1')):
+        spec = '<eref target="https://tools.ietf.org/html/rfc6234">RFC 6234</eref>'
+    elif(codec.startswith('sha2')):
+        spec = '<eref target="https://tools.ietf.org/html/rfc6234">RFC 6234</eref>'
+    elif(codec.startswith('md4')):
+        status = 'deprecated'
+        spec = '<eref target="https://tools.ietf.org/html/rfc6150">RFC 6150</eref>'
+    elif(codec.startswith('md5')):
+        status = 'deprecated'
+        spec = '<eref target="https://tools.ietf.org/html/rfc6151">RFC 6151</eref>'
+
+    print(f'        <c>{codec}</c><c>{identifier}</c><c>{status}</c><c>{spec}</c>')
+
+print('      </texttable>')
