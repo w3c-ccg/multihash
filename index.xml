@@ -138,6 +138,55 @@ blood pressure.
 
  </section>
 
+ <section anchor="components" title="The Multihash Fields">
+  <t>
+INTRO
+  </t>
+
+   <section anchor="core-data-types" title="Multihash Core Data Types">
+    <t>
+The following section details the core data types used by the Multihash
+data format.
+    </t>
+
+    <section anchor="cdt-uvi" title="unsigned variable integer">
+     <t>
+A data type that enables one to express an unsigned integer of variable length.
+     </t>
+
+     <t>
+When encoding an unsigned variable integer, the unsigned integer is serialized
+seven bits at a time, starting with the least significant bits. The most
+significant bit in each output byte intecates if there is a
+continuation byte. It is not possible to express a signed integer with this
+data type.
+     </t>
+
+
+   <texttable anchor="mh-uvi-examples" title="Examples of Unsigned Variable Integers">
+    <ttcol align='center'>Value</ttcol>
+    <ttcol align='right'>Encoding (bits)</ttcol>
+    <c>1</c><c>00000001</c>
+    <c>127</c><c>01111111</c>
+    <c>128</c><c>10000000 00000001</c>
+    <c>255</c><c>11111111 00000001</c>
+    <c>300</c><c>10101100 00000010</c>
+    <c>16384</c><c>10000000 10000000 00000001</c>
+   </texttable>
+
+    <t>
+Implementations MUST restrict the size of the varint to a max of nine bytes
+(63 bits). In order to avoid memory attacks on the encoding, the
+aforementioned practical maximum length of of nine bytes is used. There is
+no theoretical limit, and future specs can grow this number if it is truly
+necessary to have code or length values larger than 2^31.
+    </t>
+
+    </section>
+
+   </section>
+
+</section>
 
 </middle>
 <back>
