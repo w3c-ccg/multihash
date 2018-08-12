@@ -186,6 +186,36 @@ necessary to have code or length values larger than 2^31.
 
    </section>
 
+   <section anchor="fields" title="Multihash Fields">
+
+    <t>
+A multihash follows the TLV (type-length-value) pattern.
+    </t>
+
+    <section anchor="param-type" title="Hash Function Type">
+     <t>
+The hash function type is an
+<eref target="#cdt-uvi">unsigned variable integer</eref> identifying the hash
+function. The possible values for this field are provided in
+<eref target="#mh-registry">The Multihash Algorithms Registry</eref>.
+     </t>
+    </section>
+
+    <section anchor="param-type" title="Digest Length">
+     <t>
+The digest length is an <eref target="#cdt-uvi">unsigned variable integer</eref>
+counting the length of the digest in bytes.
+     </t>
+    </section>
+
+    <section anchor="param-type" title="Digest Value">
+     <t>
+The digest value is the hash function digest with a length of exactly what is
+specified in the digest length, which is specified in bytes.
+     </t>
+    </section>
+  </section>
+
 </section>
 
 </middle>
