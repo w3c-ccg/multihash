@@ -360,6 +360,7 @@ implementations of the specification (in alphabetical order).
 Algorithms Registry to be created and maintained at (the suggested URI)
         <eref target="http://www.iana.org/assignments/multihash-algorithms">http://www.iana.org/assignments/multihash-algorithms</eref>:
       </t>
+
       <texttable anchor="mh-registry-table" title="Multihash Algorithms Registry">
         <ttcol align="center">Codec</ttcol>
         <ttcol align="center">Identifier (hex)</ttcol>
@@ -369,20 +370,20 @@ Algorithms Registry to be created and maintained at (the suggested URI)
         <c>identity</c><c>0x00</c><c>active</c><c>Unknown</c>
         <c>md4</c><c>0xd4</c><c>deprecated</c><c><eref target="https://tools.ietf.org/html/rfc6150">RFC 6150</eref></c>
         <c>md5</c><c>0xd5</c><c>deprecated</c><c><eref target="https://tools.ietf.org/html/rfc6151">RFC 6151</eref></c>
-        <c>sha1</c><c>0x11</c><c>active</c><c>Unknown</c>
+        <c>sha1</c><c>0x11</c><c>active</c><c><eref target="https://tools.ietf.org/html/rfc6234">RFC 6234</eref></c>
         <c>sha2-256</c><c>0x12</c><c>active</c><c><eref target="https://tools.ietf.org/html/rfc6234">RFC 6234</eref></c>
         <c>sha2-512</c><c>0x13</c><c>active</c><c><eref target="https://tools.ietf.org/html/rfc6234">RFC 6234</eref></c>
         <c>dbl-sha2-256</c><c>0x56</c><c>active</c><c>Unknown</c>
-        <c>sha3-224</c><c>0x17</c><c>active</c><c><eref target="https://tools.ietf.org/html/rfc6234">RFC 6234</eref></c>
-        <c>sha3-256</c><c>0x16</c><c>active</c><c><eref target="https://tools.ietf.org/html/rfc6234">RFC 6234</eref></c>
-        <c>sha3-384</c><c>0x15</c><c>active</c><c><eref target="https://tools.ietf.org/html/rfc6234">RFC 6234</eref></c>
-        <c>sha3-512</c><c>0x14</c><c>active</c><c><eref target="https://tools.ietf.org/html/rfc6234">RFC 6234</eref></c>
+        <c>sha3-224</c><c>0x17</c><c>active</c><c>Unknown</c>
+        <c>sha3-256</c><c>0x16</c><c>active</c><c>Unknown</c>
+        <c>sha3-384</c><c>0x15</c><c>active</c><c>Unknown</c>
+        <c>sha3-512</c><c>0x14</c><c>active</c><c>Unknown</c>
         <c>shake-128</c><c>0x18</c><c>active</c><c>Unknown</c>
         <c>shake-256</c><c>0x19</c><c>active</c><c>Unknown</c>
-        <c>keccak-224</c><c>0x1a</c><c>active</c><c>Unknown</c>
-        <c>keccak-256</c><c>0x1b</c><c>active</c><c>Unknown</c>
-        <c>keccak-384</c><c>0x1c</c><c>active</c><c>Unknown</c>
-        <c>keccak-512</c><c>0x1d</c><c>active</c><c>Unknown</c>
+        <c>keccak-224</c><c>0x1A</c><c>active</c><c>Unknown</c>
+        <c>keccak-256</c><c>0x1B</c><c>active</c><c>Unknown</c>
+        <c>keccak-384</c><c>0x1C</c><c>active</c><c>Unknown</c>
+        <c>keccak-512</c><c>0x1D</c><c>active</c><c>Unknown</c>
         <c>murmur3-128</c><c>0x22</c><c>active</c><c>Unknown</c>
         <c>murmur3-32</c><c>0x23</c><c>active</c><c>Unknown</c>
         <c>blake2b-8</c><c>0xb201</c><c>active</c><c><eref target="https://tools.ietf.org/html/rfc7693">RFC 7693</eref></c>
@@ -482,6 +483,7 @@ Algorithms Registry to be created and maintained at (the suggested URI)
         <c>blake2s-248</c><c>0xb25f</c><c>active</c><c><eref target="https://tools.ietf.org/html/rfc7693">RFC 7693</eref></c>
         <c>blake2s-256</c><c>0xb260</c><c>active</c><c><eref target="https://tools.ietf.org/html/rfc7693">RFC 7693</eref></c>
       </texttable>
+
       <t>
 NOTE: The most up to date place for developers to find the table above is
 <eref target="https://github.com/multiformats/multihash/blob/master/hashtable.csv">https://github.com/multiformats/multihash/blob/master/hashtable.csv</eref>.
