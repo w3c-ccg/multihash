@@ -216,6 +216,24 @@ specified in the digest length, which is specified in bytes.
     </section>
   </section>
 
+  <section anchor="fields" title="A Multihash Example">
+
+    <t>
+For example, the following is an expression of a SHA2-256 hash in hexadecimal
+notation (spaces added for readability purposes):
+
+    <figure>
+     <artwork>
+12 20 41dd7b6443542e75701aa98a0c235951a28a0d851b11564d20022ab11d2589a8
+     </artwork>
+    </figure>
+
+The first byte (0x12) specifies the SHA2-256 hash function. The second byte
+(0x20) specifies the length of the hash, which is 32 bytes. The rest of the
+data specifies the value of the output of the hash function.
+    </t>
+
+  </section>
 </section>
 
 </middle>
