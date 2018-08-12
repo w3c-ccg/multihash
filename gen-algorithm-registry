@@ -24,17 +24,17 @@ for line in csvdata:
     spec = 'Unknown'
 
     if(codec.startswith('blake2')):
-        spec = '<eref target="https://tools.ietf.org/html/rfc7693">RFC 7693</eref>'
+        spec = '<xref target="RFC7693">RFC 7693</xref>'
     elif(codec.startswith('sha1')):
-        spec = '<eref target="https://tools.ietf.org/html/rfc6234">RFC 6234</eref>'
+        spec = '<xref target="RFC6234">RFC 6234</xref>'
     elif(codec.startswith('sha2')):
-        spec = '<eref target="https://tools.ietf.org/html/rfc6234">RFC 6234</eref>'
+        spec = '<xref target="RFC6234">RFC 6234</xref>'
     elif(codec.startswith('md4')):
         status = 'deprecated'
-        spec = '<eref target="https://tools.ietf.org/html/rfc6150">RFC 6150</eref>'
+        spec = '<xref target="RFC6150">RFC 6150</xref>'
     elif(codec.startswith('md5')):
         status = 'deprecated'
-        spec = '<eref target="https://tools.ietf.org/html/rfc6151">RFC 6151</eref>'
+        spec = '<xref target="RFC6151">RFC 6151</xref>'
 
     print(f'        <c>{codec}</c><c>{identifier}</c><c>{status}</c><c>{spec}</c>')
 
