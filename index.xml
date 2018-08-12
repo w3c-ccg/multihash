@@ -2,15 +2,8 @@
 <!DOCTYPE rfc PUBLIC "-//IETF//DTD RFC 2629//EN" "http://xml.resource.org/authoring/rfc2629.dtd" [
   <!ENTITY rfc2119 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml">
   <!ENTITY rfc2617 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2617.xml">
-  <!ENTITY rfc3230 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.3230.xml">
-  <!ENTITY rfc3447 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.3447.xml">
-  <!ENTITY rfc4648 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.4648.xml">
-  <!ENTITY rfc5246 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.5246.xml">
-  <!ENTITY rfc6376 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6376.xml">
-  <!ENTITY rfc6749 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6749.xml">
-  <!ENTITY rfc7230 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.7230.xml">
-  <!ENTITY rfc7235 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.7235.xml">
-  <!ENTITY jwa SYSTEM "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.draft-ietf-jose-json-web-algorithms-20.xml">
+  <!ENTITY rfc6234 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6234.xml">
+  <!ENTITY rfc7693 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.7693.xml">
 ]>
 <?xml-stylesheet type="text/xsl" href="rfc2629.xsl" ?>
 <?rfc compact="yes" ?>
@@ -227,19 +220,12 @@ data specifies the value of the output of the hash function.
 <back>
   <references title="Normative References">
 &rfc2119;
-&rfc4648;
-&rfc6376;
-&rfc7230;
-&rfc7235;
-&jwa;
+&rfc6234;
+&rfc7693;
   </references>
 
   <references title="Informative References">
 &rfc2617;
-&rfc3230;
-&rfc3447;
-&rfc5246;
-&rfc6749;
   </references>
 
   <section anchor="appendix-a" title="Security Considerations">
@@ -258,7 +244,7 @@ different hash digest lengths at play. The input test data for all of the
 examples in this section is: <artwork>Merkle–Damgård</artwork>
     </t>
 
-    <section anchor="default-test" title="SHA-1">
+    <section anchor="tv-sha1" title="SHA-1">
       <t>
         <artwork>
 11148a173fd3e32c0fa78b90fe42d305f202244e2739
@@ -270,7 +256,7 @@ length: 20 (0x14), digest: 8a173fd3e32c0fa78b90fe42d305f202244e2739
       </t>
     </section>
 
-    <section anchor="default-test" title="SHA-256">
+    <section anchor="tv-sha256" title="SHA-256">
       <t>
         <artwork>
 122041dd7b6443542e75701aa98a0c235951a28a0d851b11564d20022ab11d2589a8
@@ -282,7 +268,7 @@ length: 32 (0x20), digest: 41dd7b6443542e75701aa98a0c235951a28a0d851b11564d20022
       </t>
     </section>
 
-    <section anchor="default-test" title="SHA-512/256">
+    <section anchor="tv-sha512-256" title="SHA-512/256">
       <t>
         <artwork>
 132052eb4dd19f1ec522859e12d89706156570f8fbab1824870bc6f8c7d235eef5f4
@@ -295,7 +281,7 @@ digest: 52eb4dd19f1ec522859e12d89706156570f8fbab1824870bc6f8c7d235eef5f4
       </t>
     </section>
 
-    <section anchor="default-test" title="SHA-512">
+    <section anchor="tv-sha512" title="SHA-512">
       <t>
         <artwork>
 134052eb4dd19f1ec522859e12d89706156570f8fbab1824870bc6f8c7d235eef5f4c2cbbafd365f96fb12b1d98a0334870c2ce90355da25e6a1108a6e17c4aaebb0
@@ -308,7 +294,7 @@ digest: 52eb4dd19f1ec522859e12d89706156570f8fbab1824870bc6f8c7d235eef5f4c2cbbafd
       </t>
     </section>
 
-    <section anchor="default-test" title="blake2b512">
+    <section anchor="tv-blake2b512" title="blake2b512">
       <t>
         <artwork>
 b24040d91ae0cb0e48022053ab0f8f0dc78d28593d0f1c13ae39c9b169c136a779f21a0496337b6f776a73c1742805c1cc15e792ddb3c92ee1fe300389456ef3dc97e2
@@ -321,7 +307,7 @@ digest: d91ae0cb0e48022053ab0f8f0dc78d28593d0f1c13ae39c9b169c136a779f21a0496337b
       </t>
     </section>
 
-    <section anchor="default-test" title="blake2b256">
+    <section anchor="tv-blake2b256" title="blake2b256">
       <t>
         <artwork>
 b220207d0a1371550f3306532ff44520b649f8be05b72674e46fc24468ff74323ab030
@@ -334,7 +320,7 @@ digest: 7d0a1371550f3306532ff44520b649f8be05b72674e46fc24468ff74323ab030
       </t>
     </section>
 
-    <section anchor="default-test" title="blake2s256">
+    <section anchor="tv-blake2s256" title="blake2s256">
       <t>
         <artwork>
 b26020a96953281f3fd944a3206219fad61a40b992611b7580f1fa091935db3f7ca13d
@@ -347,7 +333,7 @@ digest: a96953281f3fd944a3206219fad61a40b992611b7580f1fa091935db3f7ca13d
       </t>
     </section>
 
-    <section anchor="default-test" title="blake2s128">
+    <section anchor="tv-blake2s128" title="blake2s128">
       <t>
         <artwork>
 b250100a4ec6f1629e49262d7093e2f82a3278
