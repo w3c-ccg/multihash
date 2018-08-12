@@ -219,7 +219,6 @@ notation (spaces added for readability purposes):
         The first byte (0x12) specifies the SHA2-256 hash function. The second byte
 (0x20) specifies the length of the hash, which is 32 bytes. The rest of the
 data specifies the value of the output of the hash function.
-     .
       </t>
     </section>
   </section>
@@ -348,7 +347,7 @@ digest: a96953281f3fd944a3206219fad61a40b992611b7580f1fa091935db3f7ca13d
       </t>
     </section>
 
-    <section anchor="default-test" title="black2s128">
+    <section anchor="default-test" title="blake2s128">
       <t>
         <artwork>
 b250100a4ec6f1629e49262d7093e2f82a3278
