@@ -145,7 +145,7 @@ A data type that enables one to express an unsigned integer of variable length.
         <t>
 When encoding an unsigned variable integer, the unsigned integer is serialized
 seven bits at a time, starting with the least significant bits. The most
-significant bit in each output byte intecates if there is a
+significant bit in each output byte indicates if there is a
 continuation byte. It is not possible to express a signed integer with this
 data type.
         </t>
@@ -168,7 +168,7 @@ data type.
         <t>
 Implementations MUST restrict the size of the varint to a max of nine bytes
 (63 bits). In order to avoid memory attacks on the encoding, the
-aforementioned practical maximum length of of nine bytes is used. There is
+aforementioned practical maximum length of nine bytes is used. There is
 no theoretical limit, and future specs can grow this number if it is truly
 necessary to have code or length values larger than 2^31.
         </t>
