@@ -489,7 +489,7 @@ Algorithms Registry to be created and maintained at (the suggested URI)
 
       <t>
 NOTE: The most up to date place for developers to find the table above is
-<eref target="https://github.com/multiformats/multihash/blob/master/hashtable.csv">https://github.com/multiformats/multihash/blob/master/hashtable.csv</eref>.
+<eref target="https://github.com/multiformats/multicodec/blob/master/table.csv">https://github.com/multiformats/multicodec/blob/master/table.csv</eref>.
       </t>
     </section>
   </section>
