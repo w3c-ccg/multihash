@@ -178,14 +178,14 @@ necessary to have code or length values larger than 2^31.
       <t>
 A multihash follows the TLV (type-length-value) pattern.
         </t>
-      <section anchor="param-type" title="Hash Function Type">
+      <section anchor="param-type" title="Hash Function Identifier">
         <t>
 
-          The hash function type is an
+          The hash function identifier is an
           <eref target="#cdt-uvi">unsigned variable integer</eref>
           identifying the hash
 function. The possible values for this field are provided in
-          <eref target="#mh-registry">The Multihash Algorithms Registry</eref>.
+          <eref target="#mh-registry">The Multihash Identifier Registry</eref>.
         </t>
       </section>
       <section anchor="param-type" title="Digest Length">
@@ -356,17 +356,18 @@ implementations of the specification (in alphabetical order).
     </t>
   </section>
   <section anchor="appendix-d" title="IANA Considerations">
-    <section anchor="mh-registry" title="The Multihash Algorithms Registry">
+    <section anchor="mh-registry" title="The Multihash Identifier Registry">
       <t>
 
-        The following initial entries should be added to the Multihash
-Algorithms Registry to be created and maintained at (the suggested URI)
-        <eref target="http://www.iana.org/assignments/multihash-algorithms">http://www.iana.org/assignments/multihash-algorithms</eref>:
+        The Multihash Identifier Registry contains canonical names and hexadecimal identifiers
+        of hash functions supported by Multihash. The following initial entries should be added
+        to the registry to be created and maintained at (the suggested URI)
+        <eref target="http://www.iana.org/assignments/multihash-identifiers">http://www.iana.org/assignments/multihash-identifiers</eref>:
       </t>
 
-      <texttable anchor="mh-registry-table" title="Multihash Algorithms Registry">
-        <ttcol align="center">Codec</ttcol>
-        <ttcol align="center">Identifier (hex)</ttcol>
+      <texttable anchor="mh-registry-table" title="Multihash Identifier Registry">
+        <ttcol align="center">Name</ttcol>
+        <ttcol align="center">Identifier</ttcol>
         <ttcol align="center">Status</ttcol>
         <ttcol align="center">Specification</ttcol>
 
