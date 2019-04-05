@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# Script to generate the multihash algorithms registry from the CSV file
+# Script to generate the multihash identifier registry from the CSV file
 import codecs
 import csv
 import urllib.request
@@ -10,9 +10,9 @@ stream = urllib.request.urlopen(url)
 csvdata = csv.reader(codecs.iterdecode(stream, 'utf-8'))
 
 print("""
-      <texttable anchor="mh-registry-table" title="Multihash Algorithms Registry">
-        <ttcol align="center">Codec</ttcol>
-        <ttcol align="center">Identifier (hex)</ttcol>
+      <texttable anchor="mh-registry-table" title="Multihash Identifier Registry">
+        <ttcol align="center">Name</ttcol>
+        <ttcol align="center">Identifier</ttcol>
         <ttcol align="center">Status</ttcol>
         <ttcol align="center">Specification</ttcol>
 """)
