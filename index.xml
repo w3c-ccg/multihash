@@ -5,6 +5,7 @@
   <!ENTITY rfc6150 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6150.xml">
   <!ENTITY rfc6151 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6151.xml">
   <!ENTITY rfc7693 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.7693.xml">
+  <!ENTITY registry SYSTEM "identifier-registry.xml">
 ]>
 <?xml-stylesheet type="text/xsl" href="rfc2629.xsl" ?>
 <?rfc compact="yes" ?>
@@ -365,128 +366,7 @@ implementations of the specification (in alphabetical order).
         <eref target="http://www.iana.org/assignments/multihash-identifiers">http://www.iana.org/assignments/multihash-identifiers</eref>:
       </t>
 
-      <texttable anchor="mh-registry-table" title="Multihash Identifier Registry">
-        <ttcol align="center">Name</ttcol>
-        <ttcol align="center">Identifier</ttcol>
-        <ttcol align="center">Status</ttcol>
-        <ttcol align="center">Specification</ttcol>
-
-        <c>identity</c><c>0x00</c><c>active</c><c>Unknown</c>
-        <c>md4</c><c>0xd4</c><c>deprecated</c><c><xref target="RFC6150">RFC 6150</xref></c>
-        <c>md5</c><c>0xd5</c><c>deprecated</c><c><xref target="RFC6151">RFC 6151</xref></c>
-        <c>sha1</c><c>0x11</c><c>active</c><c><xref target="RFC6234">RFC 6234</xref></c>
-        <c>sha2-256</c><c>0x12</c><c>active</c><c><xref target="RFC6234">RFC 6234</xref></c>
-        <c>sha2-512</c><c>0x13</c><c>active</c><c><xref target="RFC6234">RFC 6234</xref></c>
-        <c>dbl-sha2-256</c><c>0x56</c><c>active</c><c>Unknown</c>
-        <c>sha3-224</c><c>0x17</c><c>active</c><c>Unknown</c>
-        <c>sha3-256</c><c>0x16</c><c>active</c><c>Unknown</c>
-        <c>sha3-384</c><c>0x15</c><c>active</c><c>Unknown</c>
-        <c>sha3-512</c><c>0x14</c><c>active</c><c>Unknown</c>
-        <c>shake-128</c><c>0x18</c><c>active</c><c>Unknown</c>
-        <c>shake-256</c><c>0x19</c><c>active</c><c>Unknown</c>
-        <c>keccak-224</c><c>0x1A</c><c>active</c><c>Unknown</c>
-        <c>keccak-256</c><c>0x1B</c><c>active</c><c>Unknown</c>
-        <c>keccak-384</c><c>0x1C</c><c>active</c><c>Unknown</c>
-        <c>keccak-512</c><c>0x1D</c><c>active</c><c>Unknown</c>
-        <c>murmur3-128</c><c>0x22</c><c>active</c><c>Unknown</c>
-        <c>murmur3-32</c><c>0x23</c><c>active</c><c>Unknown</c>
-        <c>blake2b-8</c><c>0xb201</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-16</c><c>0xb202</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-24</c><c>0xb203</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-32</c><c>0xb204</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-40</c><c>0xb205</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-48</c><c>0xb206</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-56</c><c>0xb207</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-64</c><c>0xb208</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-72</c><c>0xb209</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-80</c><c>0xb20a</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-88</c><c>0xb20b</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-96</c><c>0xb20c</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-104</c><c>0xb20d</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-112</c><c>0xb20e</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-120</c><c>0xb20f</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-128</c><c>0xb210</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-136</c><c>0xb211</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-144</c><c>0xb212</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-152</c><c>0xb213</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-160</c><c>0xb214</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-168</c><c>0xb215</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-176</c><c>0xb216</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-184</c><c>0xb217</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-192</c><c>0xb218</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-200</c><c>0xb219</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-208</c><c>0xb21a</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-216</c><c>0xb21b</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-224</c><c>0xb21c</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-232</c><c>0xb21d</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-240</c><c>0xb21e</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-248</c><c>0xb21f</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-256</c><c>0xb220</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-264</c><c>0xb221</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-272</c><c>0xb222</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-280</c><c>0xb223</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-288</c><c>0xb224</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-296</c><c>0xb225</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-304</c><c>0xb226</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-312</c><c>0xb227</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-320</c><c>0xb228</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-328</c><c>0xb229</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-336</c><c>0xb22a</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-344</c><c>0xb22b</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-352</c><c>0xb22c</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-360</c><c>0xb22d</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-368</c><c>0xb22e</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-376</c><c>0xb22f</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-384</c><c>0xb230</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-392</c><c>0xb231</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-400</c><c>0xb232</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-408</c><c>0xb233</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-416</c><c>0xb234</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-424</c><c>0xb235</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-432</c><c>0xb236</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-440</c><c>0xb237</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-448</c><c>0xb238</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-456</c><c>0xb239</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-464</c><c>0xb23a</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-472</c><c>0xb23b</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-480</c><c>0xb23c</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-488</c><c>0xb23d</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-496</c><c>0xb23e</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-504</c><c>0xb23f</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2b-512</c><c>0xb240</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-8</c><c>0xb241</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-16</c><c>0xb242</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-24</c><c>0xb243</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-32</c><c>0xb244</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-40</c><c>0xb245</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-48</c><c>0xb246</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-56</c><c>0xb247</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-64</c><c>0xb248</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-72</c><c>0xb249</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-80</c><c>0xb24a</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-88</c><c>0xb24b</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-96</c><c>0xb24c</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-104</c><c>0xb24d</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-112</c><c>0xb24e</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-120</c><c>0xb24f</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-128</c><c>0xb250</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-136</c><c>0xb251</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-144</c><c>0xb252</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-152</c><c>0xb253</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-160</c><c>0xb254</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-168</c><c>0xb255</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-176</c><c>0xb256</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-184</c><c>0xb257</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-192</c><c>0xb258</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-200</c><c>0xb259</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-208</c><c>0xb25a</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-216</c><c>0xb25b</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-224</c><c>0xb25c</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-232</c><c>0xb25d</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-240</c><c>0xb25e</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-248</c><c>0xb25f</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>blake2s-256</c><c>0xb260</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-      </texttable>
+      &registry;
 
       <t>
 NOTE: The most up to date place for developers to find the table above is
