@@ -509,7 +509,7 @@ NOTE: The most up to date place for developers to find the table above is
       </t>
 
         <t>Digest Algorithm: MH</t>
-        <t>Description: The multihash-serialized value of a multihash-supported algorithm.</t>
+        <t>Description: The multibase-serialized value of a multihash-supported algorithm.</t>
         <t>References: this document</t>
         <t>Status: standard</t>
         
