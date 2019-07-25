@@ -500,6 +500,20 @@ NOTE: The most up to date place for developers to find the table above is
 <eref target="https://github.com/multiformats/multicodec/blob/master/table.csv">https://github.com/multiformats/multicodec/blob/master/table.csv</eref>.
       </t>
     </section>
+    
+    <section anchor="mh-digest-algorithm" title="The "MH" Digest Algorithm">
+      <t>
+        This memo registers the "MH" digest algorithm in the 
+        <eref target="https://www.iana.org/assignments/http-dig-alg/http-dig-alg.xhtml">HTTP Digest Algorithm Values</eref>
+        registry with the following values:
+      </t>
+
+        <t>Digest Algorithm: MH</t>
+        <t>Description: The multihash-serialized value of a multihash-supported algorithm.</t>
+        <t>References: this document</t>
+        <t>Status: standard</t>
+        
+    </section>
   </section>
 </back>
 </rfc>
