@@ -501,7 +501,7 @@ NOTE: The most up to date place for developers to find the table above is
       </t>
     </section>
     
-    <section anchor="mh-digest-algorithm" title="The "MH" Digest Algorithm">
+    <section anchor="mh-digest-algorithm" title="The 'MH' Digest Algorithm">
       <t>
         This memo registers the "MH" digest algorithm in the 
         <eref target="https://www.iana.org/assignments/http-dig-alg/http-dig-alg.xhtml">HTTP Digest Algorithm Values</eref>
