@@ -13,7 +13,7 @@ address these needs.
 
 You can view an HTML version of the specification here:
 
-[https://w3c-dvcg.github.io/multihash/](https://w3c-dvcg.github.io/multihash/)
+[https://w3c-ccg.github.io/multihash/](https://w3c-dvcg.github.io/multihash/)
 
 We encourage contributions meeting the [Contribution
 Guidelines](CONTRIBUTING.md).  While we prefer the creation of issues
