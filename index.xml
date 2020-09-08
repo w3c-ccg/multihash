@@ -736,14 +736,14 @@ NOTE: The most up to date place for developers to find the table above is
       </t>
     </section>
 
-    <section anchor="mh-digest-algorithm" title="The 'MH' Digest Algorithm">
+    <section anchor="mh-digest-algorithm" title="The 'mh' Digest Algorithm">
       <t>
-        This memo registers the "MH" digest algorithm in the
+        This memo registers the "mh" digest-algorithm in the
         <eref target="https://www.iana.org/assignments/http-dig-alg/http-dig-alg.xhtml">HTTP Digest Algorithm Values</eref>
         registry with the following values:
       </t>
 
-        <t>Digest Algorithm: MH</t>
+        <t>Digest Algorithm: mh</t>
         <t>Description: The multibase-serialized value of a multihash-supported algorithm.</t>
         <t>References: this document</t>
         <t>Status: standard</t>
