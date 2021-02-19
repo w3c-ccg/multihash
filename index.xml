@@ -152,7 +152,7 @@ data type.
         <texttable anchor="mh-uvi-examples" title="Examples of Unsigned Variable Integers">
           <ttcol align="center">Value</ttcol>
           <ttcol align="right">Encoding (bits)</ttcol>
-          <ttcol alogn="right">hexadecimal notation</ttcol>
+          <ttcol align="right">hexadecimal notation</ttcol>
           <c>1</c>
           <c>00000001</c>
           <c>0x01</c>
@@ -185,7 +185,7 @@ necessary to have code or length values larger than 2^31.
       <t>
 A multihash follows the TLV (type-length-value) pattern.
         </t>
-      <section anchor="param-type" title="Hash Function Identifier">
+      <section anchor="hfi" title="Hash Function Identifier">
         <t>
 
           The hash function identifier is an
@@ -195,7 +195,7 @@ function. The possible values for this field are provided in
           <eref target="#mh-registry">The Multihash Identifier Registry</eref>.
         </t>
       </section>
-      <section anchor="param-type" title="Digest Length">
+      <section anchor="dl" title="Digest Length">
         <t>
 
           The digest length is an
@@ -203,14 +203,14 @@ function. The possible values for this field are provided in
           counting the length of the digest in bytes.
         </t>
       </section>
-      <section anchor="param-type" title="Digest Value">
+      <section anchor="dv" title="Digest Value">
         <t>
 The digest value is the hash function digest with a length of exactly what is
 specified in the digest length, which is specified in bytes.
         </t>
       </section>
     </section>
-    <section anchor="fields" title="A Multihash Example">
+    <section anchor="mh-example" title="A Multihash Example">
       <t>
 
         For example, the following is an expression of a SHA2-256 hash in hexadecimal
@@ -251,15 +251,13 @@ TBD
     <t>
 The multihash examples are chosen to show different hash functions and
 different hash digest lengths at play. The input test data for all of the
-examples in this section is: <artwork>Merkle–Damgård</artwork>
+examples in this section is: <figure><artwork>Merkle–Damgård</artwork></figure>
     </t>
 
     <section anchor="tv-sha1" title="SHA-1">
-      <t>
-        <artwork>
+      <t><figure><artwork>
 0x11148a173fd3e32c0fa78b90fe42d305f202244e2739
-        </artwork>
-      </t>
+      </artwork></figure></t>
       <t>
 The fields for this multihash are - hashing function: sha1 (0x11),
 length: 20 (0x14), digest: 0x8a173fd3e32c0fa78b90fe42d305f202244e2739
@@ -267,11 +265,9 @@ length: 20 (0x14), digest: 0x8a173fd3e32c0fa78b90fe42d305f202244e2739
     </section>
 
     <section anchor="tv-sha256" title="SHA-256">
-      <t>
-        <artwork>
+      <t><figure><artwork>
 0x122041dd7b6443542e75701aa98a0c235951a28a0d851b11564d20022ab11d2589a8
-        </artwork>
-      </t>
+      </artwork></figure></t>
       <t>
 The fields for this multihash are - hashing function: sha2-256 (0x12),
 length: 32 (0x20), digest: 0x41dd7b6443542e75701aa98a0c235951a28a0d851b11564d20022ab11d2589a8
@@ -279,11 +275,9 @@ length: 32 (0x20), digest: 0x41dd7b6443542e75701aa98a0c235951a28a0d851b11564d200
     </section>
 
     <section anchor="tv-sha512-256" title="SHA-512/256">
-      <t>
-        <artwork>
+      <t><figure><artwork>
 0x132052eb4dd19f1ec522859e12d89706156570f8fbab1824870bc6f8c7d235eef5f4
-        </artwork>
-      </t>
+      </artwork></figure></t>
       <t>
 The fields for this multihash are - hashing function: sha2-512 (0x13),
 length: 32 (0x20),
@@ -292,11 +286,9 @@ digest: 0x52eb4dd19f1ec522859e12d89706156570f8fbab1824870bc6f8c7d235eef5f4
     </section>
 
     <section anchor="tv-sha512" title="SHA-512">
-      <t>
-        <artwork>
+      <t><figure><artwork>
 0x134052eb4dd19f1ec522859e12d89706156570f8fbab1824870bc6f8c7d235eef5f4c2cbbafd365f96fb12b1d98a0334870c2ce90355da25e6a1108a6e17c4aaebb0
-        </artwork>
-      </t>
+      </artwork></figure></t>
       <t>
 The fields for this multihash are - hashing function: sha2-512 (0x13),
 length: 64 (0x40),
@@ -305,11 +297,9 @@ digest: 0x52eb4dd19f1ec522859e12d89706156570f8fbab1824870bc6f8c7d235eef5f4c2cbba
     </section>
 
     <section anchor="tv-blake2b512" title="blake2b512">
-      <t>
-        <artwork>
+      <t><figure><artwork>
 0xb24040d91ae0cb0e48022053ab0f8f0dc78d28593d0f1c13ae39c9b169c136a779f21a0496337b6f776a73c1742805c1cc15e792ddb3c92ee1fe300389456ef3dc97e2
-        </artwork>
-      </t>
+      </artwork></figure></t>
       <t>
 The fields for this multihash are - hashing function: blake2b-512 (0xb240),
 length: 64 (0x40),
@@ -318,11 +308,9 @@ digest: 0xd91ae0cb0e48022053ab0f8f0dc78d28593d0f1c13ae39c9b169c136a779f21a049633
     </section>
 
     <section anchor="tv-blake2b256" title="blake2b256">
-      <t>
-        <artwork>
+      <t><figure><artwork>
 0xb220207d0a1371550f3306532ff44520b649f8be05b72674e46fc24468ff74323ab030
-        </artwork>
-      </t>
+      </artwork></figure></t>
       <t>
 The fields for this multihash are - hashing function: blake2b-256 (0xb220),
 length: 32 (0x20),
@@ -331,11 +319,9 @@ digest: 0x7d0a1371550f3306532ff44520b649f8be05b72674e46fc24468ff74323ab030
     </section>
 
     <section anchor="tv-blake2s256" title="blake2s256">
-      <t>
-        <artwork>
+      <t><figure><artwork>
 0xb26020a96953281f3fd944a3206219fad61a40b992611b7580f1fa091935db3f7ca13d
-        </artwork>
-      </t>
+      </artwork></figure></t>
       <t>
 The fields for this multihash are - hashing function: blake2s-256 (0xb260),
 length: 32 (0x20),
@@ -344,11 +330,9 @@ digest: 0xa96953281f3fd944a3206219fad61a40b992611b7580f1fa091935db3f7ca13d
     </section>
 
     <section anchor="tv-blake2s128" title="blake2s128">
-      <t>
-        <artwork>
-0xb250100a4ec6f1629e49262d7093e2f82a3278
-        </artwork>
-      </t>
+      <t><figure><artwork>
+        0xb250100a4ec6f1629e49262d7093e2f82a3278
+      </artwork></figure></t>
       <t>
 The fields for this multihash are - hashing function: blake2s-128 (0xb250),
 length: 16 (0x10), digest: 0x0a4ec6f1629e49262d7093e2f82a3278
