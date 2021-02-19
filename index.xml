@@ -13,7 +13,7 @@
 <?rfc sortrefs="yes" ?>
 <?rfc symrefs="yes" ?>
 <rfc category="std" ipr="trust200902" submissionType="independent"
-  docName="draft-multiformats-multihash-01">
+  docName="draft-multiformats-multihash-02">
 <front>
 
   <title>The Multihash Data Format</title>
@@ -50,7 +50,7 @@
     </address>
   </author>
 
-  <date month="August" year="2020" />
+  <date month="February" year="2021" />
   <area>Security</area>
   <workgroup />
   <keyword>digest algorithm</keyword>
@@ -405,6 +405,7 @@ implementations of the specification (in alphabetical order).
         <c>ripemd-256</c><c>0x1054</c><c>active</c><c>Unknown</c>
         <c>ripemd-320</c><c>0x1055</c><c>active</c><c>Unknown</c>
         <c>x11</c><c>0x1100</c><c>active</c><c>Unknown</c>
+        <c>kangarootwelve</c><c>0x1d01</c><c>active</c><c>Unknown</c>
         <c>sm3-256</c><c>0x534d</c><c>active</c><c>Unknown</c>
         <c>blake2b-8</c><c>0xb201</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
         <c>blake2b-16</c><c>0xb202</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
