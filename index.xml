@@ -12,8 +12,8 @@
 <?rfc toc="yes" ?>
 <?rfc sortrefs="yes" ?>
 <?rfc symrefs="yes" ?>
-<rfc category="std" ipr="trust200902" submissionType="independent"
-  docName="draft-multiformats-multihash-02">
+<rfc category="info" ipr="trust200902" submissionType="independent"
+  docName="draft-multiformats-multihash-03">
 <front>
 
   <title>The Multihash Data Format</title>
@@ -50,7 +50,7 @@
     </address>
   </author>
 
-  <date month="February" year="2021" />
+  <date month="August" year="2021" />
   <area>Security</area>
   <workgroup />
   <keyword>digest algorithm</keyword>
