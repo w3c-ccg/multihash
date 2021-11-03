@@ -734,6 +734,21 @@ NOTE: The most up to date place for developers to find the table above is
         <t>Status: standard</t>
 
     </section>
+
+    <section anchor="mh-ni-hash-algorithm" title="The 'mh' Named Information Hash Algorithm">
+      <t>
+        This memo registers the "mh" hash algorithm in the
+        <eref target="https://www.iana.org/assignments/named-information/named-information.xhtml#hash-alg">Named Information Hash Algorithm</eref>
+        registry with the following values:
+      </t>
+
+        <t>ID: 49</t>
+        <t>Hash Name String: mh</t>
+        <t>Value Length: variable</t>
+        <t>Reference: this document</t>
+        <t>Status: current</t>
+
+    </section>
   </section>
 </back>
 </rfc>
