@@ -18,7 +18,7 @@
 
   <title>The Multihash Data Format</title>
 
-  <author initials="J.B." surname="Benet" fullname="Juan Benet">
+  <author initials="J." surname="Benet" fullname="Juan Benet">
     <organization>Protocol Labs</organization>
     <address>
       <postal>
@@ -34,7 +34,7 @@
     </address>
   </author>
 
-  <author initials="M.S." surname="Sporny" fullname="Manu Sporny">
+  <author initials="M." surname="Sporny" fullname="Manu Sporny">
     <organization>Digital Bazaar</organization>
     <address>
       <postal>
