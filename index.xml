@@ -264,7 +264,7 @@ data specifies the value of the output of the hash function.
       <seriesInfo name="RFC" value="6150"/>
       <seriesInfo name="DOI" value="10.17487/RFC6150"/>
     </reference>
-    <reference anchor="RFC6150" target="https://www.rfc-editor.org/info/rfc6150">
+    <reference anchor="RFC6151" target="https://www.rfc-editor.org/info/rfc6151">
       <front>
         <title>MD4 to Historic Status</title>
         <author fullname="S. Turner" initials="S." surname="Turner"/>
@@ -274,8 +274,8 @@ data specifies the value of the output of the hash function.
           <t>This document retires RFC 1320, which documents the MD4 algorithm, and discusses the reasons for doing so.  This document moves RFC 1320 to Historic status.  This document is not an Internet Standards Track specification; it is published for informational purposes.</t>
         </abstract>
       </front>
-      <seriesInfo name="RFC" value="6150"/>
-      <seriesInfo name="DOI" value="10.17487/RFC6150"/>
+      <seriesInfo name="RFC" value="6151"/>
+      <seriesInfo name="DOI" value="10.17487/RFC6151"/>
     </reference>
   </references>
 
