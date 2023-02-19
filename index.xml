@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rfc PUBLIC "-//IETF//DTD RFC 2629//EN" "http://xml.resource.org/authoring/rfc2629.dtd" [
-  <!ENTITY rfc2119 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml">
-  <!ENTITY rfc6234 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6234.xml">
-  <!ENTITY rfc6150 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6150.xml">
-  <!ENTITY rfc6151 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6151.xml">
-  <!ENTITY rfc7693 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.7693.xml">
-]>
+<?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet type="text/xsl" href="rfc2629.xsl" ?>
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
 <?rfc toc="yes" ?>
 <?rfc sortrefs="yes" ?>
 <?rfc symrefs="yes" ?>
-<rfc category="info" ipr="trust200902" submissionType="independent"
-  docName="draft-multiformats-multihash-05">
-<front>
+<rfc xmlns:xi="http://www.w3.org/2001/XInclude" category="info"
+  ipr="trust200902" submissionType="IETF"
+  docName="draft-multiformats-multihash-06"
+  tocInclude="true" sortRefs="true" symRefs="true" version="2">
 
+<front>
   <title>The Multihash Data Format</title>
+  <seriesInfo name="Internet-Draft" value="draft-multiformats-multihash-06"/>
 
   <author initials="J." surname="Benet" fullname="Juan Benet">
     <organization>Protocol Labs</organization>
@@ -50,11 +46,16 @@
     </address>
   </author>
 
+  <date month="February" day="19" year="2023" />
   <area>Security</area>
   <workgroup />
   <keyword>digest algorithm</keyword>
   <keyword>digital signature</keyword>
   <keyword>PKI</keyword>
+  <keyword>SHA</keyword>
+  <keyword>BLAKE</keyword>
+  <keyword>poseidon</keyword>
+  <keyword>skein</keyword>
 
   <abstract>
     <t>
@@ -65,23 +66,19 @@ data format for encoding outputs from hash functions. It is useful to write
 applications that can simultaneously support different hash function outputs as
 well as upgrade their use of hashes over time; Multihash is intended to
 address these needs.
-</t>
+    </t>
   </abstract>
 
   <note title="Feedback">
     <t>
-
 This specification is a joint work product of
-<eref target="https://protocol.ai/">Protocol Labs</eref>, the
-<eref target="https://w3c-dvcg.github.io/">W3C Digital Verification Community Group</eref>,
-and the
+<eref target="https://protocol.ai/">Protocol Labs</eref> and the
 <eref target="https://w3c-ccg.github.io/">W3C Credentials Community Group</eref>.
 Feedback related to this specification should logged in the
-<eref target="https://github.com/w3c-dvcg/multihash/issues">issue tracker</eref>
+<eref target="https://github.com/w3c-ccg/multihash/issues">issue tracker</eref>
 or be sent to
 <eref target="mailto:public-credentials@w3.org">public-credentials@w3.org</eref>.
-   .
-</t>
+    </t>
   </note>
 </front>
 <middle>
@@ -119,8 +116,8 @@ may still only use a single hash function at a time, the use of multihash
 makes it clear to applications that hash values may use different hash
 functions or be longer in the future. Tooling, applications, and scripts
 can avoid making assumptions about the length, and read it from the
-multihash value instead. This way, the vast majority of tooling – which
-may not do any checking of hashes – would not have to be upgraded at all.
+multihash value instead. This way, the vast majority of tooling - which
+may not do any checking of hashes - would not have to be upgraded at all.
 This vastly simplifies the upgrade process, avoiding the waste of hundreds
 or thousands of software engineering hours, deep frustrations, and high
 blood pressure.
@@ -186,7 +183,6 @@ A multihash follows the TLV (type-length-value) pattern.
         </t>
       <section anchor="hfi" title="Hash Function Identifier">
         <t>
-
           The hash function identifier is an
           <eref target="#cdt-uvi">unsigned variable integer</eref>
           identifying the hash
@@ -196,7 +192,6 @@ function. The possible values for this field are provided in
       </section>
       <section anchor="dl" title="Digest Length">
         <t>
-
           The digest length is an
           <eref target="#cdt-uvi">unsigned variable integer</eref>
           counting the length of the digest in bytes.
@@ -227,14 +222,61 @@ data specifies the value of the output of the hash function.
 
 <back>
   <references title="Normative References">
-&rfc2119;
-&rfc6234;
-&rfc7693;
+    <reference anchor="RFC6234" target="https://www.rfc-editor.org/info/rfc6234">
+      <front>
+        <title>US Secure Hash Algorithms (SHA and SHA-based HMAC and HKDF)</title>
+        <author fullname="D. Eastlake 3rd" initials="D." surname="Eastlake 3rd"/>
+        <author fullname="T. Hansen" initials="T." surname="Hansen"/>
+        <date month="May" year="2011"/>
+        <abstract>
+          <t>Federal Information Processing Standard, FIPS</t>
+        </abstract>
+      </front>
+      <seriesInfo name="RFC" value="6234"/>
+      <seriesInfo name="DOI" value="10.17487/RFC6234"/>
+    </reference>
+    <reference anchor="RFC7693" target="https://www.rfc-editor.org/info/rfc7693">
+      <front>
+        <title>The BLAKE2 Cryptographic Hash and Message Authentication Code (MAC)</title>
+        <author fullname="M-J. Saarinen" role="editor" surname="M-J. Saarinen"/>
+        <author fullname="J-P. Aumasson" surname="J-P. Aumasson"/>
+        <date month="November" year="2015"/>
+        <abstract>
+          <t>This document describes the cryptographic hash function BLAKE2 and makes the algorithm specification and C source code conveniently available to the Internet community.  BLAKE2 comes in two main flavors: BLAKE2b is optimized for 64-bit platforms and BLAKE2s for smaller architectures.  BLAKE2 can be directly keyed, making it functionally equivalent to a Message Authentication Code (MAC).</t>
+        </abstract>
+      </front>
+      <seriesInfo name="RFC" value="7693"/>
+      <seriesInfo name="DOI" value="10.17487/RFC7693"/>
+    </reference>
   </references>
 
   <references title="Informative References">
-&rfc6150;
-&rfc6151;
+    <reference anchor="RFC6150" target="https://www.rfc-editor.org/info/rfc6150">
+      <front>
+        <title>MD4 to Historic Status</title>
+        <author fullname="S. Turner" initials="S." surname="Turner"/>
+        <author fullname="L. Chen" initials="L." surname="Chen"/>
+        <date month="March" year="2011"/>
+        <abstract>
+          <t>This document retires RFC 1320, which documents the MD4 algorithm, and discusses the reasons for doing so.  This document moves RFC 1320 to Historic status.  This document is not an Internet Standards Track specification; it is published for informational purposes.</t>
+        </abstract>
+      </front>
+      <seriesInfo name="RFC" value="6150"/>
+      <seriesInfo name="DOI" value="10.17487/RFC6150"/>
+    </reference>
+    <reference anchor="RFC6150" target="https://www.rfc-editor.org/info/rfc6150">
+      <front>
+        <title>MD4 to Historic Status</title>
+        <author fullname="S. Turner" initials="S." surname="Turner"/>
+        <author fullname="L. Chen" initials="L." surname="Chen"/>
+        <date month="March" year="2011"/>
+        <abstract>
+          <t>This document retires RFC 1320, which documents the MD4 algorithm, and discusses the reasons for doing so.  This document moves RFC 1320 to Historic status.  This document is not an Internet Standards Track specification; it is published for informational purposes.</t>
+        </abstract>
+      </front>
+      <seriesInfo name="RFC" value="6150"/>
+      <seriesInfo name="DOI" value="10.17487/RFC6150"/>
+    </reference>
   </references>
 
   <section anchor="appendix-a" title="Security Considerations">
