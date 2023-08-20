@@ -432,8 +432,32 @@ implementations of the specification (in alphabetical order).
         <eref target="http://www.iana.org/assignments/multihash-identifiers">http://www.iana.org/assignments/multihash-identifiers</eref>:
       </t>
 
+      <texttable anchor="mh-registry-table" title="Multihash Identifier Registry">
+        <ttcol align="center">Name</ttcol>
+        <ttcol align="center">Identifier</ttcol>
+        <ttcol align="center">Status</ttcol>
+        <ttcol align="center">Specification</ttcol>
+
+        <c>identity</c><c>0x00</c><c>active</c><c>Unknown</c>
+        <c>sha1</c><c>0x11</c><c>active</c><c><xref target="RFC6234">RFC 6234</xref></c>
+        <c>sha2-256</c><c>0x12</c><c>active</c><c><xref target="RFC6234">RFC 6234</xref></c>
+        <c>sha2-512</c><c>0x13</c><c>active</c><c><xref target="RFC6234">RFC 6234</xref></c>
+        <c>sha3-512</c><c>0x14</c><c>active</c><c><xref target="FIPS202">FIPS 202</xref></c>
+        <c>sha3-384</c><c>0x15</c><c>active</c><c><xref target="FIPS202">FIPS 202</xref></c>
+        <c>sha3-256</c><c>0x16</c><c>active</c><c><xref target="FIPS202">FIPS 202</xref></c>
+        <c>sha3-224</c><c>0x17</c><c>active</c><c><xref target="FIPS202">FIPS 202</xref></c>
+        <c>sha2-384</c><c>0x20</c><c>active</c><c><xref target="RFC6234">RFC 6234</xref></c>
+        <c>sha2-256-trunc254-padded</c><c>0x1012</c><c>active</c><c><xref target="RFC6234">RFC 6234</xref></c>
+        <c>sha2-224</c><c>0x1013</c><c>active</c><c><xref target="RFC6234">RFC 6234</xref></c>
+        <c>sha2-512-224</c><c>0x1014</c><c>active</c><c><xref target="RFC6234">RFC 6234</xref></c>
+        <c>sha2-512-256</c><c>0x1015</c><c>active</c><c><xref target="RFC6234">RFC 6234</xref></c>
+        <c>blake2b-256</c><c>0xb220</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
+        <c>poseidon-bls12_381-a2-fc1</c><c>0xb401</c><c>active</c><c>Unknown</c>
+      </texttable>
+
       <t>
-NOTE: The most up to date place for developers to find the table above is
+NOTE: The most up to date place for developers to find the table above, plus
+all multihash headers in "draft" status, is
 <eref target="https://github.com/multiformats/multicodec/blob/master/table.csv">https://github.com/multiformats/multicodec/blob/master/table.csv</eref>.
       </t>
     </section>
