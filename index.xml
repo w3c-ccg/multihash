@@ -257,6 +257,19 @@ data specifies the value of the output of the hash function.
       <seriesInfo name="DOI" value="10.17487/RFC6234"/>
     </reference>
 
+    <reference anchor="FIPS202" target="https://doi.org/10.6028/NIST.FIPS.202">
+      <front>
+        <title>SHA-3 Standard: Permutation-Based Hash and Extendable-Output Functions</title>
+        <author fullname="Information Technology Laboratory, National Institute of Standards and Technology" role="editor" surname="NIST"/>
+        <date month="August" year="2015"/>
+        <abstract>
+          <t>This Standard specifies the Secure Hash Algorithm-3 (SHA-3) family of functions on binary data.</t>
+        </abstract>
+      </front>
+      <seriesInfo name="FIPS" value="202"/>
+      <seriesInfo name="DOI" value="10.6028/NIST.FIPS.202"/>
+    </reference>
+
     <reference anchor="RFC7693" target="https://www.rfc-editor.org/info/rfc7693">
       <front>
         <title>The BLAKE2 Cryptographic Hash and Message Authentication Code (MAC)</title>
