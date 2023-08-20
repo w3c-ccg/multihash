@@ -7,12 +7,12 @@
 <?rfc symrefs="yes" ?>
 <rfc xmlns:xi="http://www.w3.org/2001/XInclude" category="info"
   ipr="trust200902" submissionType="IETF"
-  docName="draft-multiformats-multihash-06"
+  docName="draft-multiformats-multihash-07"
   tocInclude="true" sortRefs="true" symRefs="true" version="2">
 
 <front>
   <title>The Multihash Data Format</title>
-  <seriesInfo name="Internet-Draft" value="draft-multiformats-multihash-06"/>
+  <seriesInfo name="Internet-Draft" value="draft-multiformats-multihash-07"/>
 
   <author initials="J." surname="Benet" fullname="Juan Benet">
     <organization>Protocol Labs</organization>
@@ -46,7 +46,7 @@
     </address>
   </author>
 
-  <date month="February" day="19" year="2023" />
+  <date month="August" day="20" year="2023" />
   <area>Security</area>
   <workgroup />
   <keyword>digest algorithm</keyword>
@@ -55,7 +55,6 @@
   <keyword>SHA</keyword>
   <keyword>BLAKE</keyword>
   <keyword>poseidon</keyword>
-  <keyword>skein</keyword>
 
   <abstract>
     <t>
