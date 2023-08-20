@@ -270,6 +270,21 @@ data specifies the value of the output of the hash function.
       <seriesInfo name="DOI" value="10.6028/NIST.FIPS.202"/>
     </reference>
 
+    <reference anchor="POSEIDON" target="https://eprint.iacr.org/2019/458.pdf">
+      <front>
+        <title>POSEIDON: A New Hash Function for Zero-Knowledge Proof Systems</title>
+        <author fullname="Lorenzo Grassi" role="editor" surname="Grassi" initials="L." />
+        <author fullname="Dmitry Khovratovich" surname="Khovratovich" initials="D." />
+        <author fullname="Christian Rechberger" surname="Rechberger" initials="C." />
+        <author fullname="Arnab Roy" surname="Roy" initials="A." />
+        <author fullname="Markus Schofnegger" surname="Schofnegger" initials="M." />
+        <date month="November" year="2019"/>
+        <abstract>
+          <t>A modular framework and concrete instances of cryptographic hash functions which work natively with GF(p) objects. The POSEIDON hash function uses up to 8x fewer constraints per message bit than a Pedersen Hash.</t>
+        </abstract>
+      </front>
+    </reference>
+
     <reference anchor="RFC7693" target="https://www.rfc-editor.org/info/rfc7693">
       <front>
         <title>The BLAKE2 Cryptographic Hash and Message Authentication Code (MAC)</title>
@@ -452,7 +467,7 @@ implementations of the specification (in alphabetical order).
         <c>sha2-512-224</c><c>0x1014</c><c>active</c><c><xref target="RFC6234">RFC 6234</xref></c>
         <c>sha2-512-256</c><c>0x1015</c><c>active</c><c><xref target="RFC6234">RFC 6234</xref></c>
         <c>blake2b-256</c><c>0xb220</c><c>active</c><c><xref target="RFC7693">RFC 7693</xref></c>
-        <c>poseidon-bls12_381-a2-fc1</c><c>0xb401</c><c>active</c><c>Unknown</c>
+        <c>poseidon-bls12_381-a2-fc1</c><c>0xb401</c><c>active</c><c><xref target="POSEIDON">POSEIDON</xref></c>
       </texttable>
 
       <t>

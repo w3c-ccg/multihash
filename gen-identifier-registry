@@ -37,6 +37,8 @@ for line in csvdata:
         spec = '<xref target="RFC6234">RFC 6234</xref>'
     elif(codec.startswith('sha3')):
         spec = '<xref target="FIPS202">FIPS 202</xref>'
+    elif(codec.startswith('poseidon')):
+        spec = '<xref target="POSEIDON">POSEIDON</xref>'
     elif(codec.startswith('md4')):
         status = 'deprecated'
         spec = '<xref target="RFC6150">RFC 6150</xref>'
